@@ -26,3 +26,7 @@ Few basic test scripts were written for foundational purposes.
 ### `yarn build`
 
 Builds the app for production to the `build` folder.
+
+## Live DEMO
+
+[https://autocomplete-component-golden.vercel.app/](https://autocomplete-component-golden.vercel.app/)
