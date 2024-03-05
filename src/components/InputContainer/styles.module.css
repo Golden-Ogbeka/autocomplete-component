@@ -1,0 +1,15 @@
+.container {
+  max-width: 100%;
+  position: relative;
+}
+
+.feedback {
+  margin-block: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.error {
+  color: var(--error);
+  font-weight: bold;
+}
