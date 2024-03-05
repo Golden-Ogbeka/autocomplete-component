@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 
+// Component to reset the state
 const ClearInput = ({
   searchInput,
   setSearchInput,

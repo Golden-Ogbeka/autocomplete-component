@@ -23,14 +23,17 @@ const ResultMenu = ({
   return (
     <div className={styles.container} data-testid='result-menu'>
       <ul className={styles.listContainer}>
+        {/* Loop through all matching results */}
         {data.map(
           (item) =>
+            //Filter out results that don't include search term
             item.name.common.toLowerCase().includes(searchInput.toLowerCase()) && (
               <li
                 key={item.name.official}
                 className={styles.listItem}
                 onClick={(e) => chooseOption(item.name.common)}
               >
+                {/* Format the item to highlight text that is part of search term */}
                 {highlightMatch(item.name.common, searchInput)}
               </li>
             )

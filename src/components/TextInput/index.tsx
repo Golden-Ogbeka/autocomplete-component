@@ -18,9 +18,7 @@ const TextInput = ({
       className={styles.textField}
       value={searchInput}
       onChange={updateInput}
-      onFocus={() => {
-        openMenu();
-      }}
+      onFocus={openMenu} // open result menu on focus
     />
   );
 };

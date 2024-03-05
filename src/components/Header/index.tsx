@@ -1,5 +1,4 @@
-import React from 'react';
-
+// Intro Text
 const Header = () => {
   return (
     <header className='App-header'>

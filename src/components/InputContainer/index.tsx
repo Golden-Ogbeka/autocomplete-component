@@ -25,7 +25,7 @@ const InputContainer = () => {
   return (
     <div
       className={styles.container}
-      tabIndex={100}
+      tabIndex={100} // Did this to allow blur function recognize presence of child
       onBlur={(e) => {
         const currentTarget = e.currentTarget;
 
@@ -38,17 +38,24 @@ const InputContainer = () => {
         });
       }}
     >
+      {/* Show loading state or error */}
       <div className={styles.feedback}>
         {loading && <LoadingIndicator text='Fetching Countries' />}
         {error && <span className={styles.error}>{error}</span>}
       </div>
+
+      {/* Input for text search */}
       <TextInput
         searchInput={searchInput}
         updateInput={updateInput}
         closeMenu={closeMenu}
         openMenu={openMenu}
       />
+
+      {/* Clear button */}
       <ClearInput searchInput={searchInput} setSearchInput={setSearchInput} />
+
+      {/* Menu to show all matching results */}
       {showMenu && (
         <ResultMenu
           searchInput={searchInput}

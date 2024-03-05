@@ -3,6 +3,7 @@ import styles from './style.module.css';
 const LoadingIndicator = ({ text, size = 10 }: { text?: string; size?: number }) => {
   return (
     <div className={styles.container}>
+      {/* Spinner */}
       <div
         className={styles.loader}
         style={{
@@ -10,6 +11,7 @@ const LoadingIndicator = ({ text, size = 10 }: { text?: string; size?: number })
           width: size,
         }}
       />
+      {/* Loading Text */}
       {text && <span>{text}</span>}
     </div>
   );

@@ -9,8 +9,12 @@ const useGetData = () => {
   const getData = async () => {
     try {
       setLoading(true);
+
+      // Fetch list of countries from external api
       let response = await fetch('https://restcountries.com/v3.1/all?fields=name');
       response = await response.json();
+
+      // Reset the error if api call is successful
       setError('');
 
       // Did this because fetch's data is returned as Response type

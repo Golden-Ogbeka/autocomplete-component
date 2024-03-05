@@ -1,3 +1,8 @@
+// This function converts both the string being checked and the
+// matching value to lowercase, splits the string being checked at the point
+// where it matches and then combines the string back with a replaced version
+// of the matching part. The replaced version of a span element that's highlighted
+
 export const highlightMatch = (initialString: string, match: string) => {
   if (!match) {
     return initialString;
